@@ -1,0 +1,1 @@
+kubectl -n kubernetes-dashboard  get secrets -o jsonpath="{.items[?(@.metadata.annotations['kubernetes\.io/service-account\.name']=='admin-user')].data.token}"
